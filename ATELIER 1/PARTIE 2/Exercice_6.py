@@ -21,7 +21,6 @@ def frais_mensuel(kilometre,type_carburant,cylindre,prix_caburant):
         surcout = 1.70
     
     frais_mensuel = ((kilometre/100) * (consommation*prix_caburant) * surcout) / 12
-    print(frais_mensuel)
     return frais_mensuel 
 
 # test_unitaire() lance une série de tests comparant le résultat obtenue et attendue dans les cas les plus significatif.
@@ -29,8 +28,8 @@ def test_unitaire():
     kilometre_test = [5000,6500,1500]
     type_carburant_test = ["E","E","D"]
     cylindre_test = [1500,2300,0]
-    prix_caburant_test = [1.20,2.30,5.60]
-    resultat_test= [60,186.875,95.2]
+    prix_caburant_test = [1.20,2.30,5]
+    resultat_test= [60,186.875,85]
     succes = True
 
     for i in range(0,len(kilometre_test)) :
