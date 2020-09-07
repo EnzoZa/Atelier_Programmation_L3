@@ -8,7 +8,7 @@ import time
 
 def imposable(sexe, age):
     """ 
-    Ce fonction permet de savoir en fonction de l'age et du sexe d'un habitant si il est imposable ou non
+    Cette fonction permet de savoir en fonction de l'age et du sexe d'un habitant si il est imposable ou non
     (Homme de plus de 20ans -> Imposable, Femme entre 18 et 35 ans -> Imposable, Reste -> Non Imposable)
     """
 
