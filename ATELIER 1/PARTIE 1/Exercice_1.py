@@ -4,6 +4,7 @@
 #Description : Calcule Salaire
 
 #EXERCICE 1
+import time
 
 def calculer_salaire(nombre_heures,salaire_horaire ):
     """ 
@@ -26,15 +27,32 @@ def calculer_salaire(nombre_heures,salaire_horaire ):
     
     return salaire
 
+
+# test_unitaire() lance une série de tests comparant le résultat obtenue et attendue dans les cas les plus significatif.
+def test_unitaire():
+    horaire_test = [0,10,0,10,159,165,200,210]
+    salaire_test = [0,0,10,10,10,10,10,10]
+    resultat_test= [0,0,0,100,1590,1662.5,2100,2252]
+    succes = 0
+    for i in range(0,8) :
+        if calculer_salaire(horaire_test[i],salaire_test[i]) == resultat_test[i] :
+            print(">",end="")
+        else :
+            print("X",end="")
+            succes = 1
+        time.sleep(0.2)
+
+    if succes == 0 :
+        print(" SUCCES",end="")
+    else :
+        print(" FAILED",end="")
     
-def test_unitaire()
 
 
-
-nombre_heures = int(input("Votre nombre d'heure :"))
-salaire_horaire = int(input("Votre salaire horaire :"))
-print("Votre salaire sera : {} € ".format(calculer_salaire(nombre_heures,salaire_horaire )))
-calculer_salaire(nombre_heures,salaire_horaire )
+#nombre_heures = int(input("Votre nombre d'heure :"))
+#salaire_horaire = int(input("Votre salaire horaire :"))
+#print("Votre salaire sera : {} € ".format(calculer_salaire(nombre_heures,salaire_horaire )))
+test_unitaire()
 
 
 
