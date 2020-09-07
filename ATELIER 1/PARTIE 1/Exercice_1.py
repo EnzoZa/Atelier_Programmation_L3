@@ -35,6 +35,15 @@ def test_unitaire():
     salaire_test = [0,0,10,10,10,10,10,10]
     resultat_test= [0,0,0,100,1590,1662.5,2100,2250]
     succes = 0
+    """
+    Sugestion : Should use 
+    for i in range (0, len(horaire_test)) :
+    instead of :
+    for i in range(0,5) :
+    for a better code adaptation ;)
+
+    -- Axel <3 --
+    """
     for i in range(0,8) :
         if calculer_salaire(horaire_test[i],salaire_test[i]) == resultat_test[i] :
             print(">",end="")
