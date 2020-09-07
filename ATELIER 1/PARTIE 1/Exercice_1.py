@@ -34,15 +34,15 @@ def test_unitaire():
     horaire_test = [0,10,0,10,159,165,200,210]
     salaire_test = [0,0,10,10,10,10,10,10]
     resultat_test= [0,0,0,100,1590,1662.5,2100,2250]
-    succes = False
+    succes = True
     for i in range(0,len(horaire_test)) :
         if calculer_salaire(horaire_test[i],salaire_test[i]) == resultat_test[i] :
             print(">",end="")
         else :
             print("X",end="")
-            succes = True
+            succes = False
 
-    if succes == False :
+    if succes == True :
         print(" TEST IS SUCCES")
     else :
         print(" TEST IS FAILED")
