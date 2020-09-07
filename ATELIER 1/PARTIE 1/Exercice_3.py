@@ -8,7 +8,7 @@ import time
 
 def imposable(sexe, age):
     """ 
-    Ce fonction permet de savoir en fonction de l'age et du sexe d'un habitant si il est imposable ou non
+    Cette fonction permet de savoir en fonction de l'age et du sexe d'un habitant si il est imposable ou non
     (Homme de plus de 20ans -> Imposable, Femme entre 18 et 35 ans -> Imposable, Reste -> Non Imposable)
     """
 
@@ -24,6 +24,16 @@ def test_unitaire():
     age_test = [20,17,36,19,21]
     resultat_test= ["Vous n'êtes pas imposable","Vous n'êtes pas imposable","Vous n'êtes pas imposable","Vous êtes imposable","Vous êtes imposable"]
     succes = 0
+
+    """
+    Sugestion : Should use 
+    for i in range (0, len(sexe_test)) :
+    instead of :
+    for i in range(0,5) :
+    for a better code adaptation ;)
+
+    -- Axel <3 --
+    """
     for i in range(0,5) :
         if imposable(sexe_test[i],age_test[i]) == resultat_test[i] :
             print(">",end="")
