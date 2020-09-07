@@ -6,12 +6,12 @@
 #EXERCICE 1
 import time
 
+
 def calculer_salaire(nombre_heures,salaire_horaire ):
     """ 
     Cette fonction permet de calculer le salaire a partir du salaire horaire et du nombre d'heure de travail, en prenant en compte les majorations des heures supplémentaires
     (25% au-delà de 160h, 50% au-delà de 200h)
     """
-
     salaire = 0.0
     if nombre_heures > 160 : 
         salaire = 160 * salaire_horaire
@@ -26,7 +26,8 @@ def calculer_salaire(nombre_heures,salaire_horaire ):
         salaire = nombre_heures * salaire_horaire
     
     return salaire
-
+    
+   
 
 # test_unitaire() lance une série de tests comparant le résultat obtenue et attendue dans les cas les plus significatif.
 def test_unitaire():
