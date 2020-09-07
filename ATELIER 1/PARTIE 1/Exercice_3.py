@@ -22,7 +22,7 @@ def imposable(sexe, age):
 def test_unitaire():
     sexe_test = ["H","F","F","F","H"]
     age_test = [20,17,36,19,21]
-    resultat_test= ["Vous n'êtes pas imposable","Vous n'êtes pas imposable","Vous êtes imposable","Vous êtes imposable","Vous êtes imposable"]
+    resultat_test= ["Vous n'êtes pas imposable","Vous n'êtes pas imposable","Vous n'êtes pas imposable","Vous êtes imposable","Vous êtes imposable"]
     succes = 0
     for i in range(0,5) :
         if imposable(sexe_test[i],age_test[i]) == resultat_test[i] :
@@ -30,12 +30,12 @@ def test_unitaire():
         else :
             print("X",end="")
             succes = 1
-        time.sleep(0.2)
+        time.sleep(0.1)
 
     if succes == 0 :
-        print(" SUCCES")
+        print(" TEST IS SUCCES")
     else :
-        print(" FAILED")
+        print(" TEST IS FAILED")
 
 
 test_unitaire()

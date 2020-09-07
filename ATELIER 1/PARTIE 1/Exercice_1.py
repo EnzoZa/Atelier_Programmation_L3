@@ -40,12 +40,12 @@ def test_unitaire():
         else :
             print("X",end="")
             succes = 1
-        time.sleep(0.2)
+        time.sleep(0.1)
 
     if succes == 0 :
-        print(" SUCCES")
+        print(" TEST IS SUCCES")
     else :
-        print(" FAILED")
+        print(" TEST IS FAILED")
     
 
 test_unitaire()
