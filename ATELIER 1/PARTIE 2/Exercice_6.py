@@ -7,7 +7,7 @@
 
 def frais_mensuel(kilometre,type_carburant,cylindre,prix_caburant):
     """ 
-   Cette fonction permet de savoir les frais mensuels d'utilisation des voitures d'un concessionnaire
+   Cette fonction permet de calculer les frais mensuels d'utilisation des voitures d'un concessionnaire
    en fonction du nombre de kilomètres parcourue en une année, le type de carburant, la cylindrée et le prix du carburant
     """
 
