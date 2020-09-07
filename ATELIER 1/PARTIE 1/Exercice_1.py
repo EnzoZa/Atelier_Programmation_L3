@@ -32,7 +32,7 @@ def calculer_salaire(nombre_heures,salaire_horaire ):
 def test_unitaire():
     horaire_test = [0,10,0,10,159,165,200,210]
     salaire_test = [0,0,10,10,10,10,10,10]
-    resultat_test= [0,0,0,100,1590,1662.5,2100,2252]
+    resultat_test= [0,0,0,100,1590,1662.5,2100,2250]
     succes = 0
     for i in range(0,8) :
         if calculer_salaire(horaire_test[i],salaire_test[i]) == resultat_test[i] :
@@ -43,9 +43,9 @@ def test_unitaire():
         time.sleep(0.2)
 
     if succes == 0 :
-        print(" SUCCES",end="")
+        print(" SUCCES")
     else :
-        print(" FAILED",end="")
+        print(" FAILED")
     
 
 test_unitaire()

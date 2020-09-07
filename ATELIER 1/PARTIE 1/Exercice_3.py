@@ -33,9 +33,9 @@ def test_unitaire():
         time.sleep(0.2)
 
     if succes == 0 :
-        print(" SUCCES",end="")
+        print(" SUCCES")
     else :
-        print(" FAILED",end="")
+        print(" FAILED")
 
 
 test_unitaire()
