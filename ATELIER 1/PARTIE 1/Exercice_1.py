@@ -4,7 +4,7 @@
 #Description : Calcule Salaire
 
 #EXERCICE 1
-import time
+
 
 
 def calculer_salaire(nombre_heures,salaire_horaire ):
@@ -34,16 +34,15 @@ def test_unitaire():
     horaire_test = [0,10,0,10,159,165,200,210]
     salaire_test = [0,0,10,10,10,10,10,10]
     resultat_test= [0,0,0,100,1590,1662.5,2100,2250]
-    succes = 0
+    succes = False
     for i in range(0,len(horaire_test)) :
         if calculer_salaire(horaire_test[i],salaire_test[i]) == resultat_test[i] :
             print(">",end="")
         else :
             print("X",end="")
-            succes = 1
-        time.sleep(0.1)
+            succes = True
 
-    if succes == 0 :
+    if succes == False :
         print(" TEST IS SUCCES")
     else :
         print(" TEST IS FAILED")
