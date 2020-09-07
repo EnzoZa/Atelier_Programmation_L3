@@ -30,15 +30,15 @@ def exercice_2(char):
 def test_unitaire():
     car_test = ["a", "B", "#", "1", "5", "G", "@", "$"]
     car_awaited_res = ["lowercase", "uppercase", "special", "number", "number", "uppercase", "special", "special"]
-    success = True
+    succes = True
     for i in range (0, len(car_test)) :  
         if exercice_2(car_test[i]) == car_awaited_res[i]:
             print(">",end="")
         else : 
             print("X",end="")
-            success = False
+            succes = False
     
-    if success == True :
+    if succes == True :
         print(" TEST IS SUCCESSFUL")
     else :
         print(" TEST FAILED")
