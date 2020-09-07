@@ -48,11 +48,11 @@ def test_unitaire():
         print(" FAILED",end="")
     
 
-
-#nombre_heures = int(input("Votre nombre d'heure :"))
-#salaire_horaire = int(input("Votre salaire horaire :"))
-#print("Votre salaire sera : {} € ".format(calculer_salaire(nombre_heures,salaire_horaire )))
 test_unitaire()
+nombre_heures = int(input("Votre nombre d'heure :"))
+salaire_horaire = int(input("Votre salaire horaire :"))
+print("Votre salaire sera : {} € ".format(calculer_salaire(nombre_heures,salaire_horaire )))
+
 
 
 

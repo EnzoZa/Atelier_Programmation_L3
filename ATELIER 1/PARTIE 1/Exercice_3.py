@@ -36,9 +36,10 @@ def test_unitaire():
         print(" SUCCES",end="")
     else :
         print(" FAILED",end="")
-    
 
-#sexe = input("Votre sexe (H/F) :")
-#age = int(input("Votre age: "))
-#print("Votre salaire sera : {} € ".format(imposable(sexe, age)))
+
 test_unitaire()
+sexe = input("Votre sexe (H/F) :")
+age = int(input("Votre age: "))
+print("Votre salaire sera : {} € ".format(imposable(sexe, age)))
+
