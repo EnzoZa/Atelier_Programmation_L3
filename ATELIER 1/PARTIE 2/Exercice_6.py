@@ -1,14 +1,18 @@
 #Auteur : Jean-François Giammari & Axel Frau
-#Date : 07/09/2020 
+#Date : 08/09/2020 
 #Version : 1
-#Description : X
+#Description : Concessionnaire automobile
 
-#EXERCICE X
+#EXERCICE 6
 
-def X():
+def frais_mensuel(kilometre,type_carburant,cylindre,prix_caburant):
     """ 
-
+   Cette fonction permet de savoir les frais mensuels d'utilisation des voitures d'un concessionnaire
+   en fonction du nombre de kilomètres parcourue en une année, le type de carburant, la cylindrée et le prix du carburant
     """
+    
+
+    return 
     
 
 print("x")
