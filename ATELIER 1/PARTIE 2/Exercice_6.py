@@ -11,7 +11,6 @@ def frais_mensuel(kilometre,type_carburant,cylindre,prix_caburant):
    en fonction du nombre de kilomètres parcourue en une année, le type de carburant, la cylindrée et le prix du carburant
     """
     LIMITE_CYLINDRE = 2000
-
     frais_mensuel = 0
     surcout = 1.50
     consommation = 8
@@ -23,6 +22,13 @@ def frais_mensuel(kilometre,type_carburant,cylindre,prix_caburant):
     
     frais_mensuel = ((kilometre/100) * (consommation*prix_caburant) * surcout) / 12
     return frais_mensuel 
+
+
+
+
+
+
+
 
 # test_unitaire() lance une série de tests comparant le résultat obtenue et attendue dans les cas les plus significatif.
 def test_unitaire():

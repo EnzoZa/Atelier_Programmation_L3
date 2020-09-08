@@ -4,14 +4,14 @@
 #Description : Impôts
 
 #EXERCICE 3
-import time
+
 
 def imposable(sexe, age):
     """ 
     Cette fonction permet de savoir en fonction de l'age et du sexe d'un habitant si il est imposable ou non
     (Homme de plus de 20ans -> Imposable, Femme entre 18 et 35 ans -> Imposable, Reste -> Non Imposable)
     """
-    AGE_HOMME_LIMITE = 20
+    AGE_HOMME_LIMITE = 20 
     AGE_HOMME_MIN = 18
     AGE_HOMME_MAX = 35
 
@@ -19,6 +19,15 @@ def imposable(sexe, age):
         return "Vous êtes imposable"
     else : 
         return "Vous n'êtes pas imposable"
+
+
+
+
+
+
+
+
+
 
 
 # test_unitaire() lance une série de tests comparant le résultat obtenue et attendue dans les cas les plus significatif.
@@ -34,7 +43,6 @@ def test_unitaire():
         else :
             print("X",end="")
             succes = False
-        time.sleep(0.1)
 
     if succes == True :
         print(" TEST IS SUCCES")
