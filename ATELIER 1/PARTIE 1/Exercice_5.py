@@ -35,7 +35,7 @@ def frais_portuaire(nom = "Default" ,longueur= -1, categorie = -1):
         taxe_annuel = 250
 
     frais = cout_mensuel*12+taxe_annuel
-    print("Le coût annuel d'une place au port pour le violier {} est de {} euros".format(nom, frais))
+    print("Le coût annuel d'une place au port pour le voilier {} est de {} euros".format(nom, frais))
     return frais
 
 # test_unitaire() lance une série de tests comparant le résultat obtenue et attendue dans les cas les plus significatif.
