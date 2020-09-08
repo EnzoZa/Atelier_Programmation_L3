@@ -28,7 +28,7 @@ def message_imc(imc:float)->str:
 
 
 def test_unitaire():
-    imc_test = [16, 17, 19, 26,31,45]
+    imc_test = [16, 17, 19, 26,31,36,45]
     resultat_test= ["dénutrition ou famine","maigreur","corpulence normale","surpoids","obésité modérée","obésité sévère","obésité morbide"]
     succes = True
 
