@@ -18,18 +18,19 @@ def exercice_4(nbr_photocopie):
         return 0.0
     if nbr_photocopie <= 10:
         prix = nbr_photocopie * 0.10
-        return round(prix, 2)
+        res = round(prix, 2)
     else :
         prix = 10 * 0.10
         nbr_photocopie_remaining = nbr_photocopie - 10
         if nbr_photocopie_remaining <= 20 :
             prix += nbr_photocopie_remaining * 0.09
-            return round(prix, 2)
+            res = round(prix, 2)
         else :
             prix += 20 * 0.09
             nbr_photocopie_remaining -= 20
             prix += nbr_photocopie_remaining * 0.08
-        return round(prix, 2)
+        res = round(prix, 2)
+    return res
 
 def test_unitaire():
     nbr_photoco_test = [-1, 0, 100, 10, 30, 667, 45, 27]
@@ -49,4 +50,4 @@ def test_unitaire():
 
 test_unitaire()
 nbr_photoco = int(input('Combien de photocopie voulez vous ? '))
-print("Le prix total pour", nbr_photoco, "est de " + str(exercice_4(nbr_photoco)) + "€")
+print("Le prix total pour", nbr_photoco, "photocopie(s) est de " + str(exercice_4(nbr_photoco)) + "€")
