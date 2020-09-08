@@ -9,18 +9,24 @@ def frais_portuaire(nom = "Default" ,longueur= -1, categorie = -1):
     """ 
     Cette fonction permet de calculer les frais portuaire annuel d'une place dans un port en fonction de la longueur et de la catégorie du bateau
     """
+
+    PETIT_BATEAU = 5
+    MOYEN_BATEAU = 10
+    GRAND_BATEAU = 12
+
     if longueur == -1:
         nom = input("Veuillez saisir le nom de votre bateau : ")
         longueur = float(input("Veuillez saisir la longueur de votre bateau en m :  "))
         categorie = int(input("Veuillez saisir la catégorie de votre bateau (1,2,3) : "))
+
     cout_mensuel = 100
     taxe_annuel = 100
 
-    if longueur >= 5 :
+    if longueur >= PETIT_BATEAU :
         cout_mensuel = 200
-    if longueur > 10 :
+    if longueur > MOYEN_BATEAU :
         cout_mensuel = 400
-    if longueur > 12 :
+    if longueur > GRAND_BATEAU :
         cout_mensuel = 600
 
     if categorie == 2 :

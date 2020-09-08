@@ -10,12 +10,13 @@ def frais_mensuel(kilometre,type_carburant,cylindre,prix_caburant):
    Cette fonction permet de calculer les frais mensuels d'utilisation des voitures d'un concessionnaire
    en fonction du nombre de kilomètres parcourue en une année, le type de carburant, la cylindrée et le prix du carburant
     """
+    LIMITE_CYLINDRE = 2000
 
     frais_mensuel = 0
     surcout = 1.50
     consommation = 8
 
-    if cylindre > 2000 :
+    if cylindre > LIMITE_CYLINDRE :
         consommation = 10
     elif type_carburant == "D":
         surcout = 1.70

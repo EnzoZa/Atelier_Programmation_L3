@@ -12,16 +12,21 @@ def calculer_salaire(nombre_heures,salaire_horaire ):
     Cette fonction permet de calculer le salaire a partir du salaire horaire et du nombre d'heure de travail, en prenant en compte les majorations des heures supplémentaires
     (25% au-delà de 160h, 50% au-delà de 200h)
     """
+    HEURE_MIN = 160
+    HEURE_MAX = 200
+    MAJORATION_1 = 1.25
+    MAJORATION_2 = 1.50
     salaire = 0.0
-    if nombre_heures > 160 : 
-        salaire = 160 * salaire_horaire
-        nombre_heures-=160
-        if nombre_heures > 40 : 
-            salaire = salaire + (40 * (salaire_horaire*1.25))
-            nombre_heures-=40
-            salaire += (nombre_heures * (salaire_horaire*1.50))
+    
+    if nombre_heures > HEURE_MIN : 
+        salaire = HEURE_MIN * salaire_horaire
+        nombre_heures-=HEURE_MIN
+        if nombre_heures > HEURE_MAX-HEURE_MIN : 
+            salaire = salaire + (HEURE_MAX-HEURE_MIN * (salaire_horaire*MAJORATION_1))
+            nombre_heures-= HEURE_MAX-HEURE_MIN
+            salaire += (nombre_heures * (salaire_horaire*MAJORATION_2))
         else :
-            salaire += (nombre_heures * (salaire_horaire*1.25))
+            salaire += (nombre_heures * (salaire_horaire*MAJORATION_1))
     else :
         salaire = nombre_heures * salaire_horaire
     

@@ -11,8 +11,11 @@ def imposable(sexe, age):
     Cette fonction permet de savoir en fonction de l'age et du sexe d'un habitant si il est imposable ou non
     (Homme de plus de 20ans -> Imposable, Femme entre 18 et 35 ans -> Imposable, Reste -> Non Imposable)
     """
+    AGE_HOMME_LIMITE = 20
+    AGE_HOMME_MIN = 18
+    AGE_HOMME_MAX = 35
 
-    if sexe == "H" and age > 20 or sexe == "F" and age >= 18 and age <= 35 :
+    if sexe == "H" and age > AGE_HOMME_LIMITE or sexe == "F" and age >= AGE_HOMME_MIN and age <= AGE_HOMME_MAX :
         return "Vous êtes imposable"
     else : 
         return "Vous n'êtes pas imposable"
