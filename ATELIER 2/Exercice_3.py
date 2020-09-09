@@ -17,7 +17,7 @@ def racine_unique(a,b)->float :
     """ 
      Cette fonction permet de calculer la racine unique
     """
-    return (-1*b)/2*a
+    return (-1*b)/(2*a)
 
 
 def racine_double(a:float,b:float,delta:float,num:float)->float :
@@ -26,9 +26,9 @@ def racine_double(a:float,b:float,delta:float,num:float)->float :
     """
     result = 0
     if num == 1 :
-        result = ((-1*b)+math.sqrt(delta))/2*a
+        result = ((-1*b)+math.sqrt(delta))/(2*a)
     else :
-        result = ((-1*b)-math.sqrt(delta))/2*a
+        result = ((-1*b)-math.sqrt(delta))/(2*a)
 
     return result
 
@@ -42,7 +42,7 @@ def str_equation(a:float,b:float,c:float) :
     elif int(a) == -1 :
         a = "-x2"
     elif int(a) < -1 :
-        a = " "+a+"x2"
+        a =  a+"x2"
     elif int(a) > 1 :
         a = a+"x2"
     elif int(a) == 0:
@@ -53,7 +53,7 @@ def str_equation(a:float,b:float,c:float) :
     elif int(b) == -1 :
         b = " - x "
     elif int(b) < -1 :
-        b = " "+b+"x "
+        b = " - "+ str(int(b)*-1)+"x "
     elif int(b) > 1 :
         b = " + "+b+"x "
     elif int(b) == 0:
@@ -64,20 +64,23 @@ def str_equation(a:float,b:float,c:float) :
     elif int(c) == 0 :
         c =" "
     elif int(c) < -1 :
-        c = " "+c
+        c = " - "+ str(int(c)*-1)
         
     return a + b + c
 
 def solution_equation(a:float,b:float,c:float)->float :
-    determinant = discrimitant(a,b,c)
+    discriminant = discrimitant(a,b,c)
     message = "Aucune solution réelle"
-    if determinant == 0 :
-        message = "Solution de l'équation : " + str_equation(a,b,c) + "\n Racine Unique =" + str(racine_unique(a,b))
-    elif determinant >0 :
-        message = "Solution de l'équation : " + str_equation(a,b,c) + "\n x1 =" +str(racine_double(a,b,determinant,1))  + "\n x2 =" +str(racine_double(a,b,determinant,2))
+    if  discriminant == 0 :
+        message = "Solution de l'équation : " + str_equation(a,b,c) + "\n Racine Unique = " + str(round(racine_unique(a,b),2))
+    elif  discriminant >0 :
+        message = "Solution de l'équation : " + str_equation(a,b,c) + "\n x1 = " + str(round(racine_double(a,b,discriminant,1),2))  + "\n x2 = " + str(round(racine_double(a,b,discriminant,2),2))
+
 
     print(message)
 
 
-
-solution_equation(6,10,3)
+a = int(input('A : '))
+b = int(input('B : '))
+c = int(input('C : '))
+solution_equation(a,b,c)
