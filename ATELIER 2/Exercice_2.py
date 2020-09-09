@@ -5,7 +5,7 @@
 
 #EXERCICE 2
 """
-Cette fonction nous permet de savoir si une année est bisextile ou non 
+Cette fonction nous permet de savoir si une année est bisextile ou non.
 """
 
 def est_bissextile(year):
@@ -28,6 +28,5 @@ def test_unitaire():
         print(" TEST IS SUCCES")
     else :
         print(" TEST IS FAILED")
+
 test_unitaire()
-year = int(input('Veuillez rentrer une année (un entier) :'))
-print(est_bissextile(year))
