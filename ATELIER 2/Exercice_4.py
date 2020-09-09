@@ -39,7 +39,6 @@ def saisie_date_naissance(day,month,year) :
 
 def age(birthdate) :
     today = datetime.datetime.today()
-    print(((today.month, today.day) < (birthdate.month, birthdate.day)))
     #Comme false = 0 et true = 1 alors je l'utilise pour décrementer ou non l'age en fonction du mois et du jour.
     age = today.year - birthdate.year - ((today.month, today.day) < (birthdate.month, birthdate.day)) 
     return age
