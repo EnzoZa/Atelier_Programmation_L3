@@ -25,6 +25,8 @@ def exercice_7(resultats:list):
     else :
         return "eliminé_under_12.5%"
 
+        
+
 def test_unitaire():
     votes_test = [[160,46,31,42], [10,56,76,9],[100,65,89,76], [10,43,95,60]]
     res = ["win", "éliminé_majorité", "second_tour","eliminé_under_12.5%"]
