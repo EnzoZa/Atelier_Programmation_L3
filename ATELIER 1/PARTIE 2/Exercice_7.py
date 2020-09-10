@@ -5,18 +5,20 @@
 
 #EXERCICE 7
 
-def exercice_7(resultats):
+def exercice_7(resultats:list):
     """
+    cette fonciton permet de calculer les resultat des élections pour le premier candidat de la liste passée en paramètre.
     """
     TAUX_MIN_SECOND_TOUR = 0.125
+    LONGUEUR_DE_LISTE = len(resultats)
     total_de_votes = 0
     #calcul du nombre total de votes
-    for i in range(0, len(resultats)):
+    for i in range(0, LONGUEUR_DE_LISTE):
         total_de_votes += resultats[i]
-    for i in range(0, len(resultats)):
-        if resultats[i] >= total_de_votes/2 and i == 0 :
-            return "win"
-        elif resultats[i] >= total_de_votes/2 and i != 0 :
+    if resultats[0] >= total_de_votes/2 :
+        return "win"
+    for i in range(1, LONGUEUR_DE_LISTE):
+        if resultats[i] >= total_de_votes/2 :
             return "éliminé_majorité"
     if resultats[0] >= total_de_votes * TAUX_MIN_SECOND_TOUR  :
         return "second_tour"
@@ -47,9 +49,9 @@ VOTE_C4 = int(input("Entrez les resultat du candidat 4 : "))
 res = exercice_7([VOTE_C1,VOTE_C2,VOTE_C3,VOTE_C4])
 if res == "win": 
     print("Le candidat 1 a gagné à la majorité ! Félicitation !")
-if res == "éliminé_majorité" : 
+elif res == "éliminé_majorité" : 
     print("Un candidat a obtenue la majorité, le candidat 1 a perdue")
-if res == "second_tour" : 
+elif res == "second_tour" : 
     print("Le candidat numéro 1 passe au second tour")
-if res == "eliminé_under_12.5%" : 
+else : 
     print("Le candidat 1 n'a pas eu assez de voies pour passer au second tour")
