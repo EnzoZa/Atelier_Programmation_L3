@@ -5,13 +5,13 @@
 
 # EXERCICE 8
 
-def tarification(age="", annee_permis="", nbr_accidents="", annee_assure="")-> str:
+def tarification(age=None, annee_permis=None, nbr_accidents=None, annee_assure=None)-> str:
     """ 
     Cette fonction permet de definir la famille d'assurance que peut obtenir un client en fonction de sont age, du nombre d'année de permis, 
     du nombre d'accidents, et du nombre d'année assuré dans cette assurance
     """
 
-    if age == "": # Si aucun paramètre n'est définis, on demande une entrer utilisateur
+    if age == None: # Si aucun paramètre n'est définis, on demande une entrer utilisateur
         while age.isdigit() == False:
             age = input("Veuillez saisir votre age : ")
         while annee_permis.isdigit() == False:
