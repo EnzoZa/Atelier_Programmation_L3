@@ -17,6 +17,7 @@ def calculer_salaire(nombre_heures,salaire_horaire ):
     MAJORATION_1 = 1.25
     MAJORATION_2 = 1.50
     salaire = 0.0
+    
     if nombre_heures > HEURE_MIN : 
         salaire = HEURE_MIN * salaire_horaire
         nombre_heures-=HEURE_MIN
