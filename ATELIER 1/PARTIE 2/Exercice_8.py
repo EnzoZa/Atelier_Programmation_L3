@@ -5,39 +5,44 @@
 
 # EXERCICE 8
 
-def tarification(age="", annee_permis="", nbr_accidents="", annee_assure=""):
+def tarification(age="", annee_permis="", nbr_accidents="", annee_assure="")-> str:
     """ 
     Cette fonction permet de definir la famille d'assurance que peut obtenir un client en fonction de sont age, du nombre d'année de permis, 
     du nombre d'accidents, et du nombre d'année assuré dans cette assurance
-
     """
-    if age == "":
+
+    if age == "": # Si aucun paramètre n'est définis, on demande une entrer utilisateur
         while age.isdigit() == False:
             age = input("Veuillez saisir votre age : ")
         while annee_permis.isdigit() == False:
-            annee_permis = input(
-                "Veuillez saisir le nombre d'année ou vous avez été titulaire de votre permis : ")
+            annee_permis = input("Veuillez saisir le nombre d'année ou vous avez été titulaire de votre permis : ")
         while nbr_accidents.isdigit() == False:
             nbr_accidents = input("Veuillez saisir votre nombre d'accident: ")
         while annee_assure.isdigit() == False:
-            annee_assure = input(
-                "Veuillez saisir votre nombre d'année assurer chez nous : ")
+            annee_assure = input("Veuillez saisir votre nombre d'année assurer chez nous : ")
+
+    AGE_PIVOT = 25
+    PERMIS_PIVOT = 2
+    ASSURANCE_BONUS = 1
 
     tarif_name = ["Refuser", "Bleu", "Vert", "Orange", "Rouge"]
-    tarif = 4
+    tarif = 4 # Par défaut le tarif est Rouge
+
+    # Conversion en entier des entrées/paramètres
     age = int(age)
     annee_permis = int(annee_permis)
     nbr_accidents = int(nbr_accidents)
     annee_assure = int(annee_assure)
 
-    if age < 25:
+
+    if age < AGE_PIVOT: 
         if nbr_accidents > 0:
             tarif = 0
         else:
-            if annee_permis > 2:
+            if annee_permis > PERMIS_PIVOT:
                 tarif = 3
     else:
-        if annee_permis > 2:
+        if annee_permis > PERMIS_PIVOT:
             if nbr_accidents == 0:
                 tarif = 2
             elif nbr_accidents ==1:
@@ -48,17 +53,12 @@ def tarification(age="", annee_permis="", nbr_accidents="", annee_assure=""):
             if nbr_accidents == 0:
                 tarif = 3
 
-    if annee_assure > 1 :
+    if annee_assure > ASSURANCE_BONUS  : 
         if tarif != 0 and tarif-1 > 0 :
             tarif -=1
  
+    return tarif_name[tarif] 
 
-
-    if tarif > 0 :
-        print("Votre assurance accepte de vous assurer avec le tarif {}".format(tarif_name[tarif]))
-    else :
-        print("Votre assurance a refuser de vous assurer")
-    return tarif_name[tarif]
 
 
 
@@ -87,4 +87,4 @@ def test_unitaire():
 
 
 test_unitaire()
-tarification()
+print("Vous êtes {}".format(tarification()))
