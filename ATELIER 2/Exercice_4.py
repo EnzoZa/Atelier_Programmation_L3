@@ -31,19 +31,19 @@ def date_est_valide(day,month,year) :
         else: 
             return True
 
-def saisie_date_naissance(day,month,year) :
+def saisie_date_naissance(day:int,month:int,year:int) -> datetime.date or bool :
     if date_est_valide(day,month,year) :
         return datetime.date(year,month,day)
     else : 
         return False
 
-def age(birthdate) :
+def age(birthdate:date) -> int :
     today = datetime.datetime.today()
     #Comme false = 0 et true = 1 alors je l'utilise pour décrementer ou non l'age en fonction du mois et du jour.
     age = today.year - birthdate.year - ((today.month, today.day) < (birthdate.month, birthdate.day)) 
     return age
 
-def est_majeur(birthdate) :
+def est_majeur(birthdate :date) :
     if age(birthdate) >= 18 :
         return True
     else :
