@@ -10,6 +10,12 @@ Cet ensemble de fonction nous permet de verifier au final si une personne est ma
 appelle a fonction depuis un autre fonction pour tester la validité des données saisies.
 """
 def date_est_valide(day,month,year) :
+    MAX_MONTH = 12
+    MIN = 1
+    MAX_DAY_BISSEXTILE = 29
+    MAX_DAY_NON_BISSEXTILE = 28
+    MAX_DAY_EVEN = 30
+    MAX_DAY_ODD = 31
     if month > 12 or month < 1:
         return False
 
