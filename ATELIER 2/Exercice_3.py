@@ -75,8 +75,7 @@ def solution_equation(a:float,b:float,c:float)->float :
         message = "Solution de l'équation : " + str_equation(a,b,c) + "\n Racine Unique = " + str(round(racine_unique(a,b),2))
     elif  discriminant >0 :
         message = "Solution de l'équation : " + str_equation(a,b,c) + "\n x1 = " + str(round(racine_double(a,b,discriminant,1),2))  + "\n x2 = " + str(round(racine_double(a,b,discriminant,2),2))
-
-
+        
     print(message)
 
 
