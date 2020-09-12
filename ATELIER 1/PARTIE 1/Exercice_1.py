@@ -6,7 +6,7 @@
 #EXERCICE 1
 
 
-def calculer_salaire(nombre_heures,salaire_horaire ):
+def calculer_salaire(nombre_heures:int,salaire_horaire:float )->float:
     """ 
     Cette fonction permet de calculer le salaire a partir du salaire horaire et du nombre d'heure de travail, en prenant en compte les majorations des heures supplémentaires
     (25% au-delà de 160h, 50% au-delà de 200h)
@@ -14,7 +14,7 @@ def calculer_salaire(nombre_heures,salaire_horaire ):
 
     HEURE_PALIER = [160,200]
     MAJORATION_PALIER = 1.25
-    salaire = nombre_heures*salaire_horaire # Payement par défaut de toute les heures travaillé
+    salaire = nombre_heures*salaire_horaire 
 
     for i in range(len(HEURE_PALIER)):
         if nombre_heures > HEURE_PALIER[i] :
@@ -23,10 +23,7 @@ def calculer_salaire(nombre_heures,salaire_horaire ):
     return salaire
     
 
-    
-
-# Fonction comparant le résultat obtenue et attendue dans les cas les plus significatif.
-def test_unitaire():
+def test_unitaire(): # Fonction comparant le résultat obtenue et attendue dans les cas les plus significatif.
     horaire_test = [0,10,0,10,159,165,200,210]
     salaire_test = [0,0,10,10,10,10,10,10]
     resultat_test= [0,0,0,100,1590,1662.5,2100,2250]
@@ -40,7 +37,7 @@ def test_unitaire():
 
 #Appel des fonctions
 test_unitaire()
-nombre_heures = int(input("Votre nombre d'heure :"))
+nombre_heures = int(input("\nVotre nombre d'heure :"))
 salaire_horaire = int(input("Votre salaire horaire :"))
 print("Votre salaire sera : {} € ".format(calculer_salaire(nombre_heures,salaire_horaire )))
 
