@@ -20,11 +20,11 @@ def photocopie_price(nbr_photocopie:int)->float:
     PRIX_10=1 
     PRIX_20=1.8 
    
-    if nbr_photocopie <= PALIER_PRIX[0] : 
+    if nbr_photocopie <= PALIER_PRIX[0] :  #Application prix 1
         res = nbr_photocopie*PRIX_1
-    elif nbr_photocopie<=PALIER_PRIX[1] : 
+    elif nbr_photocopie<=PALIER_PRIX[1] : #Application prix 2
         res = PRIX_10+(nbr_photocopie-PALIER_PRIX[0])*PRIX_2
-    else: 
+    else: #Application prix 3
         res = PRIX_10+PRIX_20+(nbr_photocopie-PALIER_PRIX[1])*PRIX_3
   
     return round(res,2)

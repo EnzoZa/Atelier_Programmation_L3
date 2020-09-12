@@ -16,7 +16,7 @@ def calculer_salaire(nombre_heures:int,salaire_horaire:float )->float:
     MAJORATION_PALIER = 1.25
     salaire = nombre_heures*salaire_horaire 
 
-    for i in range(len(HEURE_PALIER)):
+    for i in range(len(HEURE_PALIER)): # Application des majorations
         if nombre_heures > HEURE_PALIER[i] :
             salaire += (nombre_heures-HEURE_PALIER[i]) * (salaire_horaire*MAJORATION_PALIER-salaire_horaire)
    

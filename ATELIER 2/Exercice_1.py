@@ -18,7 +18,7 @@ def message_imc(imc: float) -> str:
     IMC_VALUE_OBESITE_SEVERE = 35
     IMC_VALUE_OBESITE_MORBIDE = 40
 
-    #test pour determiner dans quelle catégorie ce trouve lIMC donner en paramètre : 
+    #Test pour determiner dans quelle catégorie ce trouve lIMC donner en paramètre : 
     message = "dénutrition ou famine"
     if imc > IMC_VALUE_MAIGREUR:
         message = "maigreur"

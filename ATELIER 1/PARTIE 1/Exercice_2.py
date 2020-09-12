@@ -18,7 +18,7 @@ def char_analyser(char:str)->str:
     result = "un caractère spécial"
     char_ascii = ord(char)
     
-    for i in range(len(PALIER)): 
+    for i in range(len(PALIER)): #Recherche du palier adequats
         if char_ascii >= PALIER[i][0] and char_ascii < PALIER[i][1]:
             result = PALIER[i][2]
 

@@ -19,6 +19,7 @@ def imposable(sexe:str, age:int)->str:
     AGE_HOMME_MAX = 35
     result = "Vous n'êtes pas imposable"
 
+    # Application des conditions pour vérifier l'imposabilité
     if sexe == "H" and age > AGE_HOMME_LIMITE or sexe == "F" and age >= AGE_HOMME_MIN and age <= AGE_HOMME_MAX :
         result = "Vous êtes imposable"
 
