@@ -32,4 +32,3 @@ def test_unitaire():
         print(" TEST IS FAILED")
 
 test_unitaire()
-print(est_bissextile(2015))
