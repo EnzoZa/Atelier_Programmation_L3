@@ -14,21 +14,17 @@ def est_bissextile(year:int) -> bool:
     return (((year%4 == 0) and not (year%100 == 0) ) or (year%400 == 0))
 
 
-def test_unitaire():
+def test_unitaire(): # Fonction comparant le résultat obtenue et attendue dans les cas les plus significatif.
+
     year_test = [2012, 2013, 2000,400]
     year_res = [True, False, True, True]
-    succes = True
 
     for i in range(0,len(year_test)) :
         if est_bissextile(year_test[i]) == year_res[i] :
             print(">",end="")
         else :
             print("X",end="")
-            succes = False
 
-    if succes == True :
-        print(" TEST IS SUCCES")
-    else :
-        print(" TEST IS FAILED")
 
+#Appel des fonctions
 test_unitaire()
