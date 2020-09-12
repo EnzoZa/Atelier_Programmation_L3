@@ -9,18 +9,28 @@ def message_imc(imc: float) -> str:
     """ 
     Cette fonction permet d'interpréter l'état de santé d'une personne en fonction de son IMC
     """
+
+    #Definition des constantes de valeur IMC : 
+    IMC_VALUE_MAIGREUR = 16.5
+    IMC_VALUE_NORMAL = 18.5
+    IMC_VALUE_SURPOIDS = 25
+    IMC_VALUE_OBESITE_MODERE = 30
+    IMC_VALUE_OBESITE_SEVERE = 35
+    IMC_VALUE_OBESITE_MORBIDE = 40
+
+    #test pour determiner dans quelle catégorie ce trouve lIMC donner en paramètre : 
     message = "dénutrition ou famine"
-    if imc > 16.5:
+    if imc > IMC_VALUE_MAIGREUR:
         message = "maigreur"
-    if imc > 18.5:
+    if imc > IMC_VALUE_NORMAL:
         message = "corpulence normale"
-    if imc > 25:
+    if imc > IMC_VALUE_SURPOIDS:
         message = "surpoids"
-    if imc > 30:
+    if imc > IMC_VALUE_OBESITE_MODERE:
         message = "obésité modérée"
-    if imc > 35:
+    if imc > IMC_VALUE_OBESITE_SEVERE:
         message = "obésité sévère"
-    if imc > 40:
+    if imc > IMC_VALUE_OBESITE_MORBIDE:
         message = "obésité morbide"
 
     return message

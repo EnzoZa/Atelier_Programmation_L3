@@ -1,20 +1,22 @@
 #Auteur : Jean-François Giammari & Axel Frau
 #Date : 08/09/2020 
-#Version : 1
+#Version : 2
 #Description : Année Bissextile
 
 #EXERCICE 2
 """
 Cette fonction nous permet de savoir si une année est bisextile ou non.
+Si l'année est divisible par 4 et pas par 100 ou bien qu'elle est divisible par 400 alors l'expression renvoi True signifiant que l'année est bissextile
 """
 
 def est_bissextile(year:int) -> bool:
-    return ((not (year%4 == 0) and (year%100 == 0) ) or not (year%400 == 0))
+    #On return directement une expression boolèenne qui verifie que l'année donnnée en paramètre est une année bissextile
+    return (((year%4 == 0) and not (year%100 == 0) ) or (year%400 == 0))
 
 
 def test_unitaire():
     year_test = [2012, 2013, 2000,400]
-    year_res = [12, False, True, True]
+    year_res = [True, False, True, True]
     succes = True
 
     for i in range(0,len(year_test)) :
@@ -30,3 +32,4 @@ def test_unitaire():
         print(" TEST IS FAILED")
 
 test_unitaire()
+print(est_bissextile(2015))
