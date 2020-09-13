@@ -72,7 +72,7 @@ def est_majeur(birthdate :datetime.date) :
     else :
         return False
 
-def test_access() :
+def test_access() : # Fonction comparant le résultat obtenue et attendue dans les cas les plus significatif.
     date_is_valid = False
     while not date_is_valid : #Tant que la date est invalide je redemande de rentrer les valeur.
         try: #Dans le cas ou un caractère autre qu'une nombre/chiffre est rentrer je redemande les valeurs (permet d'éviter les crashs)
@@ -95,6 +95,7 @@ def test_access() :
             print("Il y eu une erreur recommencer s'il vous plait")
             pass
 
+#Appel des fonctions
 test_access()
 
 

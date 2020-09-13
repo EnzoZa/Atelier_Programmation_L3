@@ -79,6 +79,7 @@ def solution_equation(a:float,b:float,c:float)->float :
     print(message)
 
 
+#Appel des fonctions
 a = int(input('A : '))
 b = int(input('B : '))
 c = int(input('C : '))

@@ -5,14 +5,15 @@
 
 #EXERCICE 2
 
-def exercice_2(char):
+def char_analyser(char:str)->str:
     """ 
     Cette fonction permet de : vérifier le type de caracter qui est entré.
-    (Si c'est une lettre majuscule alors son code ascii est compris entre 65 et 91)
-    (Si c'est une lettre minuscule alors son code ascii est compris entre 97 et 123)
-    (Si c'est un chiffre alors son code ascii est compris entre 48 et 58)
-    (Sinon on considère que c'est une caractère spécial)
+    -> Si c'est une lettre majuscule alors son code ascii est compris entre 65 et 91
+    -> Si c'est une lettre minuscule alors son code ascii est compris entre 97 et 123
+    -> Si c'est un chiffre alors son code ascii est compris entre 48 et 58
+    -> Sinon on considère que c'est un caractère spécial
     """
+<<<<<<< HEAD
     if len(char) < 1:
         print("Vous avez rentrer plus d'un caractère veuillez recommencer avec 1 seul !")
         return "wrong input"
@@ -26,32 +27,31 @@ def exercice_2(char):
             return "lowercase"
         else :
             return "special"
+=======
+>>>>>>> 0783ad2976391d74c95b8c42b7a573ec69d7013e
 
-def test_unitaire():
+    PALIER = [[48,58,"un nombre"],[65,91,"une majuscule"],[97,123,"une minuscule"]]
+    result = "un caractère spécial"
+    char_ascii = ord(char)
+    
+    for i in range(len(PALIER)): #Recherche du palier adequats
+        if char_ascii >= PALIER[i][0] and char_ascii < PALIER[i][1]:
+            result = PALIER[i][2]
+
+    return result
+
+def test_unitaire(): # Fonction comparant le résultat obtenue et attendue dans les cas les plus significatif.
     car_test = ["a", "B", "#", "1", "5", "G", "@", "$"]
-    car_awaited_res = ["lowercase", "uppercase", "special", "number", "number", "uppercase", "special", "special"]
-    succes = True
+    car_awaited_res = ["une minuscule", "une majuscule", "un caractère spécial", "un nombre", "un nombre", "une majuscule", "un caractère spécial", "un caractère spécial"]
+
     for i in range (0, len(car_test)) :  
-        if exercice_2(car_test[i]) == car_awaited_res[i]:
+        if char_analyser(car_test[i]) == car_awaited_res[i]:
             print(">",end="")
         else : 
             print("X",end="")
-            succes = False
-    
-    if succes == True :
-        print(" TEST IS SUCCESSFUL")
-    else :
-        print(" TEST FAILED")
+ 
 
+#Appel des fonctions
 test_unitaire()
-character = input("rentrer un caractère : ")
-res = exercice_2(character)
-if res == "number" :
-    to_print = "un chiffre"
-elif res == "uppercase" :
-    to_print = "Une lettre majuscule"
-elif res == "lowercase" :
-    to_print = "une lettre minuscule"
-else:
-    to_print = "un caractère spécial"
-print("charactère rentré est ", to_print)
+char = input("\nVeuillez saisir un caractère : ")
+print("Vous avez saisie {}".format(char_analyser(char)))

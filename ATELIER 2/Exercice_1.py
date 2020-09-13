@@ -18,7 +18,7 @@ def message_imc(imc: float) -> str:
     IMC_VALUE_OBESITE_SEVERE = 35
     IMC_VALUE_OBESITE_MORBIDE = 40
 
-    #test pour determiner dans quelle catégorie ce trouve lIMC donner en paramètre : 
+    #Test pour determiner dans quelle catégorie ce trouve lIMC donner en paramètre : 
     message = "dénutrition ou famine"
     if imc > IMC_VALUE_MAIGREUR:
         message = "maigreur"
@@ -36,25 +36,20 @@ def message_imc(imc: float) -> str:
     return message
 
 
-def test_unitaire():
+def test_unitaire(): # Fonction comparant le résultat obtenue et attendue dans les cas les plus significatif.
+
     imc_test = [16, 17, 19, 26, 31, 36, 45]
     resultat_test = ["dénutrition ou famine", "maigreur", "corpulence normale",
                      "surpoids", "obésité modérée", "obésité sévère", "obésité morbide"]
-    succes = True
 
     for i in range(0, len(imc_test)):
         if message_imc(imc_test[i]) == resultat_test[i]:
             print(">", end="")
         else:
             print("X", end="")
-            succes = False
-
-    if succes == True:
-        print(" TEST IS SUCCES")
-    else:
-        print(" TEST IS FAILED")
 
 
+#Appel des fonctions
 test_unitaire()
-print("Actuellement vous êtes diagnostiquer avec un état de ",
-      message_imc(float(input("Entrer votre IMC : "))))
+print("\nActuellement vous êtes diagnostiquer avec un état de ",
+message_imc(float(input("Entrer votre IMC : "))))

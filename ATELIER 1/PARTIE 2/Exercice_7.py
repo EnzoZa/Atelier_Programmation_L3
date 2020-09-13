@@ -5,9 +5,10 @@
 
 #EXERCICE 7
 
-def exercice_7(resultats:list):
+def exercice_7(resultats:list)->str:
     """
-    cette fonciton permet de calculer les resultat des élections pour le premier candidat de la liste passée en paramètre.
+    Cette fonction permet de calculer les resultat des élections pour le premier candidat
+     de la liste passée en paramètre.
     """
     TAUX_MIN_SECOND_TOUR = 0.125
     LONGUEUR_DE_LISTE = len(resultats)
