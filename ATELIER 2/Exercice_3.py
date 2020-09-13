@@ -3,6 +3,10 @@
 #Version : 1
 #Description : Résolution d'une équation du second degré
 
+"""
+Les inputs aurait pu être mis dans la fonction quitte à crée une fonction annexe dans ce seul but
+"""
+
 #EXERCICE 3
 
 import math
@@ -17,6 +21,7 @@ def racine_unique(a,b)->float :
     """ 
      Cette fonction permet de calculer la racine unique
     """
+    """Verifier si a !=0"""
     return (-1*b)/(2*a)
 
 
@@ -24,6 +29,7 @@ def racine_double(a:float,b:float,delta:float,num:float)->float :
     """ 
      Cette fonction permet de calculer la racine double
     """
+    """ Verifier si a !=0  """
     result = 0
     if num == 1 :
         result = ((-1*b)+math.sqrt(delta))/(2*a)
