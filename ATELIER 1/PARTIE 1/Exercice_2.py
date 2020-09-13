@@ -18,11 +18,11 @@ def exercice_2(char):
         return "wrong input"
     else:
         char_ascii = ord(char)
-        if char_ascii >= 48 and char_ascii < 58:
+        if 48 >= char_ascii < 58 :
             return "number"
-        elif char_ascii >= 65 and char_ascii < 91:
+        elif 65 >=char_ascii < 91 :
             return "uppercase"
-        elif char_ascii >= 97 and char_ascii < 123:
+        elif 97 >= char_ascii < 123:
             return "lowercase"
         else :
             return "special"

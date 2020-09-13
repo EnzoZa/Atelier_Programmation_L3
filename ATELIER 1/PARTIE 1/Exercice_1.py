@@ -1,13 +1,13 @@
 #Auteur : Jean-François Giammari & Axel Frau
 #Date : 07/09/2020 
-#Version : 1
+#Version : 2
 #Description : Calcule Salaire
 
 #EXERCICE 1
 
 
 
-def calculer_salaire(nombre_heures,salaire_horaire ):
+def calculer_salaire(nombre_heures:int,salaire_horaire:int) -> int:
     """ 
     Cette fonction permet de calculer le salaire a partir du salaire horaire et du nombre d'heure de travail, en prenant en compte les majorations des heures supplémentaires
     (25% au-delà de 160h, 50% au-delà de 200h)
