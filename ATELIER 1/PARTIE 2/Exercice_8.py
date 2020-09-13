@@ -53,8 +53,7 @@ def tarification(age="", annee_permis="", nbr_accidents="", annee_assure="")-> s
             if nbr_accidents == 0:
                 tarif = 3
 
-    if annee_assure > ASSURANCE_BONUS  : 
-        if tarif != 0 and tarif-1 > 0 :
+    if tarif >=2 and annee_assure > ASSURANCE_BONUS  : 
             tarif -=1
  
     return tarif_name[tarif] 
