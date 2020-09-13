@@ -6,12 +6,7 @@
 #EXERCICE 1
 
 
-<<<<<<< HEAD
-
-def calculer_salaire(nombre_heures:int,salaire_horaire:int) -> int:
-=======
 def calculer_salaire(nombre_heures:int,salaire_horaire:float )->float:
->>>>>>> 0783ad2976391d74c95b8c42b7a573ec69d7013e
     """ 
     Cette fonction permet de calculer le salaire a partir du salaire horaire et du nombre d'heure de travail, en prenant en compte les majorations des heures supplémentaires
     (25% au-delà de 160h, 50% au-delà de 200h)

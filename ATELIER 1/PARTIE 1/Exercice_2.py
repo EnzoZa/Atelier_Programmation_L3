@@ -13,23 +13,7 @@ def char_analyser(char:str)->str:
     -> Si c'est un chiffre alors son code ascii est compris entre 48 et 58
     -> Sinon on considère que c'est un caractère spécial
     """
-<<<<<<< HEAD
-    if len(char) < 1:
-        print("Vous avez rentrer plus d'un caractère veuillez recommencer avec 1 seul !")
-        return "wrong input"
-    else:
-        char_ascii = ord(char)
-        if 48 >= char_ascii < 58 :
-            return "number"
-        elif 65 >=char_ascii < 91 :
-            return "uppercase"
-        elif 97 >= char_ascii < 123:
-            return "lowercase"
-        else :
-            return "special"
-=======
->>>>>>> 0783ad2976391d74c95b8c42b7a573ec69d7013e
-
+    
     PALIER = [[48,58,"un nombre"],[65,91,"une majuscule"],[97,123,"une minuscule"]]
     result = "un caractère spécial"
     char_ascii = ord(char)
