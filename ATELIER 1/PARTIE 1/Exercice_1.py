@@ -3,6 +3,8 @@
 #Version : 2
 #Description : Calcule Salaire
 
+""" Les inputs aurait pu être mis dans la fonction quitte à crée une fonction annexe dans ce seul but """
+
 #EXERCICE 1
 
 
@@ -24,6 +26,7 @@ def calculer_salaire(nombre_heures:int,salaire_horaire:float )->float:
     
 
 def test_unitaire(): # Fonction comparant le résultat obtenue et attendue dans les cas les plus significatif.
+""" Pas de DocString """
     horaire_test = [0,10,0,10,159,165,200,210]
     salaire_test = [0,0,10,10,10,10,10,10]
     resultat_test= [0,0,0,100,1590,1662.5,2100,2250]
@@ -40,8 +43,3 @@ test_unitaire()
 nombre_heures = int(input("\nVotre nombre d'heure :"))
 salaire_horaire = int(input("Votre salaire horaire :"))
 print("Votre salaire sera : {} € ".format(calculer_salaire(nombre_heures,salaire_horaire )))
-
-
-
-
-
