@@ -8,13 +8,19 @@
 def char_analyser(char:str)->str:
     """ 
     Cette fonction permet de : vérifier le type de caracter qui est entré.
+    -> Si c'est un chiffre alors son code ascii est compris entre 48 et 58
     -> Si c'est une lettre majuscule alors son code ascii est compris entre 65 et 91
     -> Si c'est une lettre minuscule alors son code ascii est compris entre 97 et 123
-    -> Si c'est un chiffre alors son code ascii est compris entre 48 et 58
     -> Sinon on considère que c'est un caractère spécial
     """
-    
-    PALIER = [[48,58,"un nombre"],[65,91,"une majuscule"],[97,123,"une minuscule"]]
+    #Définition des constantes :
+    MIN_NUMBER = 48
+    MAX_NUMBER = 58
+    MIN_UPPERCASE = 65
+    MAX_UPPERCASE = 91
+    MIN_LOWERCASE = 97
+    MAX_LOWERCASE = 123
+    PALIER = [[MIN_NUMBER,MAX_NUMBER,"un nombre"],[MIN_UPPERCASE,MAX_UPPERCASE,"une majuscule"],[MIN_LOWERCASE,MAX_LOWERCASE,"une minuscule"]]
     result = "un caractère spécial"
     char_ascii = ord(char)
     
